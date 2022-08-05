@@ -3,7 +3,9 @@ class BanksController < ApplicationController
 
   # GET /banks
   def index
+    # @banks = Bank.where(id: session[:user_id])
     @banks = Bank.all
+
 
     render json: @banks
   end
